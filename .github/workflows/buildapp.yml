@@ -88,7 +88,7 @@ jobs:
           restore-keys: ${{ env.cache-name }}
 
       - name: Download iOS SDK
-        if: steps.SDK.outputs.cache-hit != 'true'
+        #if: steps.SDK.outputs.cache-hit != 'true'
         run: |
           # Only download the specific SDK version
           git clone -n --depth=1 --filter=tree:0 https://github.com/theos/sdks/
